@@ -22,7 +22,7 @@ export default function Todo() {
     }
   };
   const deletebtn = (id) => {
-    let delete_note = additem.filter((index) => {
+    let delete_note = additem.filter((element,index) => {
       return id !== index;
     });
     setadditem(delete_note);
@@ -32,8 +32,8 @@ export default function Todo() {
     <>
       <div className="container">
         <form>
-          <div class="mb-3 my-2">
-            <label class="form-label">Title</label>
+          <div className="mb-3 my-2">
+            <label className="form-label">Title</label>
             <input
               type="text"
               value={title}
@@ -41,11 +41,11 @@ export default function Todo() {
               onChange={(e) => {
                 settitle(e.target.value);
               }}
-              class="form-control"
+              className="form-control"
             />
           </div>
-          <div class="mb-3">
-            <label class="form-label">Description</label>
+          <div className="mb-3">
+            <label className="form-label">Description</label>
             <input
               type="text"
               value={des}
@@ -53,10 +53,10 @@ export default function Todo() {
               onChange={(e) => {
                 setdes(e.target.value);
               }}
-              class="form-control"
+              className="form-control"
             />
           </div>
-          <button class="btn button-29" onClick={addNote}>
+          <button className="btn button-29" onClick={addNote}>
             Add Note
           </button>
         </form>
@@ -67,20 +67,20 @@ export default function Todo() {
             let { title, des } = element;
             return (
               <div
-                class="card my-3 mx-3 "
+                className="card my-3 mx-3 "
                 style={{ width: "18rem" }}
                 key={index}
               >
                 <img
                   src="https://cdn.dribbble.com/users/40016/screenshots/17624032/media/411778466056b9f80f544f107b6b8150.png?resize=400x0"
-                  class="card-img-top my-2 rounded-3"
+                  className="card-img-top my-2 rounded-3"
                   alt="..."
                 />
-                <div class="card-body">
-                  <h5 class="card-title">{title}</h5>
-                  <p class="card-text">{des}</p>
+                <div className="card-body">
+                  <h5 className="card-title">{title}</h5>
+                  <p className="card-text">{des}</p>
                   <button
-                    class="btn button-29"
+                    className="btn button-29"
                     onClick={() => {
                       deletebtn(index);
                     }}
