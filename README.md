@@ -9,4 +9,15 @@ Currently, two official plugins are available:
 
 # Installation
 
-https://vitejs.dev/guide/
+https://vitejs.dev/guide/ (Full Guide)
+
+# React + Vite 
+Step 1 npm create vite@latest 
+
+Step 2 cd my-project
+
+( Only node modules and default installation for both of them have same commands. )
+
+npm install
+
+npm run dev
